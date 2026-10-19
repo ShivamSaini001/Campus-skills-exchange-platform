@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Skill Exchange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="index.html">Campus Skill Exchange</a>
+    <span class="nav-note">A little skill-sharing goes a long way</span>
+</header>
+
+<main class="landing">
+    <section class="intro">
+        <p class="eyebrow">LEARN TOGETHER</p>
+        <h1>Good at something?<br><span>Share it with someone.</span></h1>
+        <p class="intro-text">Find students who can teach you a skill, and share the things you know with them. No big deal, just learning together.</p>
+        <div class="mini-points">
+            <span>✓ Meet other students</span>
+            <span>✓ Learn at your own pace</span>
+            <span>✓ Share what you know</span>
+        </div>
+    </section>
+
+    <section class="forms">
+        <div class="form-card">
+            <h2>Welcome back</h2>
+            <p class="muted">Log in to see the skills on campus.</p>
+            <form action="login" method="post">
+                <label for="login-email">Email</label>
+                <input id="login-email" type="email" name="email" placeholder="you@example.com" required>
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" name="password" placeholder="Your password" required>
+                <button type="submit">Log in</button>
+            </form>
+        </div>
+
+        <div class="form-card register-card">
+            <h2>Make an account</h2>
+            <p class="muted">It only takes a minute.</p>
+            <form action="register" method="post">
+                <label for="full-name">Full name</label>
+                <input id="full-name" type="text" name="full_name" placeholder="Your name" maxlength="100" required>
+                <label for="register-email">College email</label>
+                <input id="register-email" type="email" name="email" placeholder="you@example.com" maxlength="150" required>
+                <label for="register-password">Password (at least 6 characters)</label>
+                <input id="register-password" type="password" name="password" minlength="6" placeholder="Create a password" required>
+                <div class="two-fields">
+                    <div>
+                        <label for="course">Course</label>
+                        <input id="course" type="text" name="course" placeholder="MCA, BCA, BTech..." maxlength="80" required>
+                    </div>
+                    <div>
+                        <label for="semester">Semester</label>
+                        <select id="semester" name="semester" required>
+                            <option value="">Choose</option>
+                            <option>1</option><option>2</option><option>3</option><option>4</option>
+                            <option>5</option><option>6</option><option>7</option><option>8</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit">Create account</button>
+            </form>
+        </div>
+        <p id="message" class="message" role="status"></p>
+    </section>
+</main>
+<footer>Made for students, by students.</footer>
+<script src="script.js"></script>
+</body>
+</html>
